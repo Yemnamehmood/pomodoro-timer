@@ -1,27 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Basic styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.container {
+  text-align: center;
+  background-color: #282a2e;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0c674;
+}
+
+.timer {
+  background-color: #1d1f21;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.time {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #8abeb7;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.controls button {
+  background-color: #81a2be;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1d1f21;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #f0c674;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #969896;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+
+  .controls button {
+    padding: 0.4rem 1rem;
   }
 }
